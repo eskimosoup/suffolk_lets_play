@@ -1,0 +1,65 @@
+<div id="high-scores">
+  <h1 id="high-score-header">High Score</h1>
+  <% unless @leaderboard_entries.blank? %>
+    <% @leaderboard_entries.each_with_index do |leaderboard_entry, i| %>
+      <div class="high-score">
+        <div class="high-score-place"><%= leaderboard_entry.place %></div>
+        <div class="high-score-name"><%= leaderboard_entry.nickname %></div>
+        <div class="high-score-points">
+          <%= number_with_delimiter(leaderboard_entry.score) %><span>pts</span>
+        </div> 
+      </div>
+    <% end %>
+  <% else %>
+    <div class="high-score no-border">
+      <div class="high-score-name">Currently no highscores.</div>
+    </div>
+  <% end %>
+
+  <% if @leaderboard_entry and !@leaderboard_entries.include?(@leaderboard_entry) %>
+    <div id="new-high-score">
+      <div class="high-score no-border">
+        <div class="high-score-place"><%= @leaderboard_entry.place %></div>
+        <div class="high-score-name"><%= @leaderboard_entry.nickname %></div>
+        <div class="high-score-points">
+          <%= number_with_delimiter(@leaderboard_entry.score) %><span>pts</span>
+        </div> 
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<%= image_tag 'purple-man.png', :id => 'purple-man-flipped' %>
+
+<!--
+<div id="high-score-more-info">
+  <div id="fruit-circle"></div>
+  <% if @category == 'activities' %>
+    For more information on healthy eating and maintaining a healthy weight
+    <%= link_to 'click here', 'http://www.leedsletschange.co.uk/pages/information-on-weight-management', :target => '_blank' %>
+  <% else %>
+    <%#= link_to 'click here', 'http://www.leedsletschange.co.uk/pages/information-on-healthy-eating', :target => '_blank' %>
+    To enter our competition and be in with a chance of winning a fantastic prize
+    <%= link_to 'click here', new_competition_entry_path %>
+  <% end %>
+</div>
+-->
+<div class="clear"></div>
+
+<div id="winner-menu">
+  <%= link_to 'play', {:action => 'play'}, :id => 'try-again' %>
+  <% if @leaderboard_entry %>
+    <%= link_to(
+          'challenge a friend', 
+          new_challenge_path(:game => params[:category], :score => @leaderboard_entry.score), 
+          { :id => 'challenge-a-friend' }
+        ) %>      
+  <% else %>
+    <%= link_to(
+        'challenge a friend', 
+        new_challenge_path(:game => params[:category]), 
+        { :id => 'challenge-a-friend' }
+      ) %>
+  <% end %>
+  <div class="clear"></div>
+</div>

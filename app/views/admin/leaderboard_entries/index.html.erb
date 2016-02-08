@@ -1,0 +1,11 @@
+<% title LeaderboardEntry.model_name.human.pluralize %>
+
+<%= link_to "View All", admin_leaderboard_entries_path %>
+<% @games.each do |game| %>
+  <%= link_to game, admin_leaderboard_entries_path(:game => game)%>
+<% end %>
+
+<%= informant_table @leaderboard_entries, {
+      :headings => [ 'Nickname', 'Email', 'Score', 'Location', 'Game', 'Competition', '', '', '' ], 
+      :body => [ :nickname, :email, :score, :location, :game, :competition, lambda{|x| l x.created_at}, it_edit, it_destroy ]
+    } %>

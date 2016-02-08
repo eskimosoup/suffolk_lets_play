@@ -1,0 +1,17 @@
+<html lang="en">
+  <body>
+    
+    <% unless @challenge.score.blank? %>  
+      <p>
+        You have been challenged by <%= @challenge.name %> to beat their highscore of <%= @challenge.score %>.
+      </p>
+    <% else %>
+      <p>
+        You have been challenged by <%= @challenge.name %>.
+      </p>
+    <% end %>
+    
+    <p>Try to beat their highscore <%= link_to "here", @challenge.url %></p>
+    
+  </body>
+</html>

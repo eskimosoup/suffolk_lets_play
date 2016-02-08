@@ -1,0 +1,33 @@
+<%= form_for([:admin, @competition_entry]) do |f| %>
+
+  <%= f.error_messages %>
+
+  <%= field_set_tag 'Basic Information' do -%>
+    
+    <div class="field">
+      <%= f.label :name %><br />
+      <%= f.text_field :name %>
+    </div>
+    
+    <div class="field">
+      <%= f.label :postcode %><br />
+      <%= f.text_field :postcode %>
+    </div>
+    
+    <div class="field">
+      <%= f.label :phone %><br />
+      <%= f.text_field :phone %>
+    </div>
+    
+    <div class="field">
+      <%= f.label :email %><br />
+      <%= f.text_field :email %>
+    </div>
+    
+  <% end -%>
+  
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+  
+<% end %>					

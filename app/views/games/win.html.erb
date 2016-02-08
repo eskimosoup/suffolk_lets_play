@@ -1,0 +1,59 @@
+<div id="winner">
+  <h1 id="winner-header">Winner</h1>
+
+  <div id="winner-stars">
+    <span><%= @leaderboard_entry.score %></span>pts
+  </div>
+  
+  <%= form_for @leaderboard_entry, {:url => "/games/#{ params[:id] }/#{ params[:category] }/submit_score"} do |f| %>
+    <%= f.hidden_field :score %>
+    <%= f.hidden_field :location %>
+    <%= f.hidden_field :game_instance_id %>
+
+    <fieldset>
+      <legend>Submit your Score</legend>
+
+      <div class="field">
+        <%= f.label :nickname, 'nick name' %>
+        <%= f.text_field :nickname %>
+      </div>
+
+      <div class="field">
+        <%= f.label :email, 'email' %>
+        <%= f.text_field :email %>
+      </div>
+
+      <div class="actions">
+        <%= submit_tag "send" %>
+      </div>
+    </fieldset>
+  <% end %>
+</div>
+
+<%= image_tag '960/purple-man-flipped.png', :id => 'purple-man-flipped' %>
+
+<!--
+<div id="winner-more-info">
+  <div id="fruit-circle"></div>
+  
+  <% if @category == 'activities' %>
+    <%= link_to 'click here', 'http://www.leedsletschange.co.uk/pages/information-on-weight-management', :target => '_blank' %>
+  <% else %>
+    <%#= link_to 'click here', 'http://www.leedsletschange.co.uk/pages/information-on-healthy-eating', :target => '_blank' %>
+    To enter our competition and be in with a chance of winning a fantastic prize
+    <%= link_to 'click here', new_competition_entry_path %>
+  <% end %>
+</div>
+-->
+<div class="clear"></div>
+
+<div id="winner-menu">
+  <%= link_to 'play again', {:action => 'play'}, :id => 'try-again' %>
+  <%= link_to(
+        'challenge a friend', 
+        new_challenge_path(:game => params[:category], :score => @leaderboard_entry.score), 
+        { :id => 'challenge-a-friend' }
+      ) %>
+  <%#= link_to 'more games', root_url, :id => 'more-games' %>
+  <div class="clear"></div>
+</div>

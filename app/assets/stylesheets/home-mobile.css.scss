@@ -1,0 +1,60 @@
+@media only screen and (max-width: 959px) {
+  
+  .intro-box {
+    
+    margin-top: 20px;
+    padding: 10px 50px 20px 30px;
+    border: 6px solid #231F20;
+    font-size: 1.2em;
+    
+    img#food-smart {
+      position: relative;
+      top: 20px;
+      left: 65px;
+      float: none;
+      margin-bottom: 35px;
+    }
+    
+  }
+  
+  #content-boxes {
+    margin-top: 0px;
+    width: 100%;
+  }
+  
+  .info-box {
+    width: 67%;
+    font-size: 1.2em;
+    &.less-padding {
+      width: 76%;
+      padding-left: 20px;
+    }
+  }
+  
+  #content-left {
+    float: left;
+    margin-top: 40px;
+    width: 456px;
+  }
+  
+  #content-right {
+    float: left;
+    margin-top: 0;
+    width: 456px;
+    .category-card {
+      margin-top: 0;
+      margin-left: 70px;
+      &:hover { top: 0; left: 10px; }
+    }
+  }
+  
+  #high-score-more-info {
+    margin: 60px 12px 80px 0;
+    padding: 8px 8px 8px 40px;
+    border: 6px solid #231f20;
+    width: 208px;
+    height: 90px;
+    font-size: 1.4em;
+  }
+  
+}

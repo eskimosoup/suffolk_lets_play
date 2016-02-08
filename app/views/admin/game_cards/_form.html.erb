@@ -1,0 +1,58 @@
+<%= form_for([:admin, @game_card]) do |f| %>
+
+  <%= f.error_messages %>
+
+  <%= field_set_tag 'Basic Information' do -%>
+    
+    <div class="field">
+      <%= f.label :name %><br />
+      <%= f.text_field :name %>
+    </div>
+    
+    <div class="field">
+      <%= f.label :game_category %><br />
+      <%= f.select :game_category, options_for_select(GameCard::GAME_CATEGORIES, :selected => f.object.game_category) %>
+    </div>
+    
+    <div class="field">
+      <%= f.label :category %><br />
+      <%= f.select :category, options_for_select(GameCard::FOOD_CATEGORIES, :selected => f.object.category), {:include_blank => true} %>
+    </div>
+    
+    <div class="field">
+      <%= f.label :units_float, "Units" %><br />
+      <%= f.number_field :units_float %>
+    </div>
+    
+    <div class="field">
+      <%= f.label :calories %><br />
+      <%= f.number_field :calories %>
+    </div>
+    
+    <div class="field">
+      <%= f.label :fact %><br />
+      <%= f.text_area :fact %>
+    </div>
+    
+    <div class="field">
+      <%= f.label :front_image %><br />
+      <%= f.image_field :front_image %>
+    </div>
+    
+    <div class="field">
+      <%= f.label :back_image %><br />
+      <%= f.image_field :back_image %>
+    </div>
+    
+    <div class="field">
+      <%= f.label :display %><br />
+      <%= f.check_box :display %>
+    </div>
+    
+  <% end -%>
+  
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+  
+<% end %>					

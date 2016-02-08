@@ -1,0 +1,28 @@
+<%= form_for @challenge do |f| %>
+  <%= f.hidden_field :url %>
+  <%= f.hidden_field :score %>
+  
+  <fieldset>
+    <legend><%= title "Challenge A Friend" %></legend>
+
+    <div class="field">
+      <%= f.label :name, 'Your name' %><br />
+      <%= f.text_field :name %>
+    </div> 
+    
+    <div class="field">
+      <%= f.label :email, 'Your friend\'s email' %><br />
+      <%= f.text_field :email %>
+    </div>
+  </fieldset>
+
+  <div class="actions">
+    <%= f.submit "Send" %>
+  </div>
+<% end %>
+
+<div id="challenge-menu">
+  <%= link_to 'play', @challenge.url.sub("#{request.host_with_port}",""), :id => 'try-again' %>
+  <%#= link_to 'more games', root_url, :id => 'more-games' %>
+  <div class="clear"></div>
+</div>

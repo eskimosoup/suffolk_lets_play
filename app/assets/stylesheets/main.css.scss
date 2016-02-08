@@ -1,0 +1,670 @@
+@import "variables";
+
+html {
+  background: white;
+}
+
+body {
+  font-family: $main-font;
+  background: #fff200;
+  color: #231f20;
+}
+
+#main-container, #menu-container, #game-container, #winner-container {
+  position: relative;
+  padding-top: 30px;
+  z-index: 1;
+}
+
+#inner-container {
+  position: relative;
+  margin: 0 auto;
+  width: 1200px;
+}
+
+#footer, #menu-footer, #winner-footer {
+  position: relative;
+  border-top: 8px solid #231f20;
+  background: white;
+}
+
+#main-container {
+  //z-index: 100;
+  margin-bottom: -110px;
+  height: 681px;
+  background: image-url("people-bg-plain.png") no-repeat bottom;
+}
+
+#menu-container {
+  margin-bottom: -179px;
+  height: 781px;
+  background: image-url("people-bg-menu.png") no-repeat bottom;
+}
+
+#game-container  {
+  margin-bottom: -223px;
+  height: 826px;
+  background: image-url("people-bg-game.png") no-repeat bottom;
+}
+
+#winner-container {
+  margin-bottom: -70px;
+  height: 775px;
+  background: image-url("people-bg-win.png") no-repeat bottom;
+}
+
+#footer {
+  height: 150px;
+}
+
+#menu-footer {
+  height: 210px;
+}
+
+#winner-footer {
+  height: 110px;
+}
+
+a#logo {
+  float: left;
+  display: block;
+  margin-left: 56px;
+  width: 212px;
+  height: 89px;
+  background: image-url("logo.png") no-repeat;
+}
+
+a#nhs-logo {
+  float: right;
+  display: block;
+  margin: 10px 56px 0 0;
+  width: 86px;
+  height: 35px;
+  background: image-url("nhs-logo.png") no-repeat;
+}
+
+.clear {
+  clear: both;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.bold {
+  font-weight: bold !important;
+}
+
+h1#choose-your-category {
+  margin: 30px auto 0;
+  width: 956px;
+  height: 100px;
+  text-indent: -3000px;
+  color: transparent;
+  background: image-url("choose-your-category.png") no-repeat;
+}
+
+h1#winner-header {
+  margin: 30px auto 0;
+  width: 354px;
+  height: 100px;
+  text-indent: -3000px;
+  color: transparent;
+  background: image-url("winner-header.png") no-repeat;
+}
+
+h1#high-score-header {
+  margin: 30px auto 20px;
+  border-bottom: 4px solid #231f20;
+  width: 480px;
+  height: 114px;
+  text-indent: -3000px;
+  color: transparent;
+  background: image-url("high-score.png") no-repeat top;
+}
+
+#category-cards {
+  margin: 10px auto 0;
+  width: 1106px;
+}
+
+#menu-cards {
+  float: right;
+  margin: 350px 5% 0 0;
+  width: 635px;
+}
+
+.category-card, .menu-card, .game-card {
+  display: inline-block;
+  float: left;
+  margin-left: 32px;
+  border: 7px solid #231f20;
+  background: white;
+
+  .card-yellow {
+    background: #fff200;
+  }
+
+  .card-yellow-squared {
+    background: image-url("yellow-squared.png");
+  }
+
+  .card-dark {
+    margin: 0 auto;
+    border-radius: 8px;
+    width: 288px;
+    height: 103px;
+    background: #231f20;
+    line-height: 2;
+    font-size: 4.2em;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+  }
+}
+
+.category-card {
+  position: relative;
+  border-radius: 20px;
+  width: 320px;
+  height: 438px;
+  cursor: pointer;
+
+  .card-yellow {
+    margin: 31px auto 0;
+    border-radius: 6px 6px 0 0;
+    width: 254px;
+    height: 285px;
+
+    img {
+      margin: -5px 0 0 -5px;
+    }
+  }
+
+  &:hover {
+    border-color: #231f21;
+    top: -20px;
+  }
+}
+
+.menu-card, .game-card {
+  border-radius: 10px;
+  width: 154px;
+  height: 217px;
+
+  .card-yellow, .card-yellow-squared {
+    margin: 14px;
+    padding-top: 60px;
+    border-radius: 4px;
+    width: 126px;
+    height: 124px;
+    font-size: 2.2em;
+    font-weight: bold;
+    text-align: center;
+
+    img {
+      margin: -74px 0 0 -14px;
+    }
+  }
+
+  .card-yellow.two-line {
+    padding-top: 40px;
+    height: 144px;
+  }
+}
+
+.menu-card {
+  position: relative;
+  cursor: pointer;
+
+  &:hover {
+    border-color: #231f21;
+    top: -10px;
+  }
+}
+
+img#purple-man {
+  float: left;
+  margin: 57px 0 17px 44px;
+  width: 398px;
+  height: 618px;
+}
+
+img#large-logo {
+  position: absolute;
+  top: 50px;
+  left: 540px;
+}
+
+img#purple-man-flipped {
+  //-moz-transform: scale(-1, 1);
+  //-webkit-transform: scale(-1, 1);
+  //-o-transform: scale(-1, 1);
+  //transform: scale(-1, 1);
+  //filter: FlipH;
+
+  float: right;
+  margin: 40px 40px -280px 0;
+  width: 398px;
+  height: 618px;
+}
+
+.cards-shelf {
+  margin-top: 4px;
+  border: 7px solid #231f20;
+  border-radius: 12px;
+  height: 25px;
+  background: #a47343;
+  box-shadow: 0 8px 0 #a7a5a6;
+}
+
+#trivia {
+  float: left;
+  margin: -38px 0 0 62px;
+  padding: 10px 16px;
+  border: 7px solid #231f20;
+  border-radius: 20px;
+  width: 830px;
+  height: 86px;
+  font-size: 1.6em;
+  background: white;
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 998;
+  background: black;
+  opacity: 0.5;
+}
+
+#overlay-message-container {
+  position: fixed;
+  top: 200px;
+  width: 100%;
+  z-index: 999;
+}
+
+.overlay-message {
+  margin: 0 auto;
+  border: 10px solid #231f20;
+  border-radius: 30px;
+  width: 640px;
+  height: 280px;
+  background: white;
+
+  h2 {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #ed1f28;
+  }
+
+  p { margin: 0 30px 10px; }
+
+  ul {
+    margin: 0 30px 0 50px;
+    li { list-style-type: disc; }
+  }
+}
+
+.overlay-message.rules {
+  font-size: 1.2em;
+
+  h2 {
+    margin: 0 30px;
+    font-size: 3em;
+  }
+
+  a { 
+    margin: 0 30px; 
+    font-size: 1.4em;
+  }
+}
+.overlay-message.subcategories {
+  font-size: 2.4em;
+
+  h2 {
+    margin: 10px 30px;
+    font-size: 1.5em;
+    text-align: center;
+  }
+
+  a { 
+    margin: 10px 0 0 50px; 
+    font-size: 1.4em;
+  }
+
+  a#subcategory-close {
+    float: right;
+    margin-right: 50px;
+  }
+}
+
+.overlay-message.game-over {
+  text-align: center;
+
+  h2 {
+    margin-top: 30px;
+    font-size: 5em;
+  }
+}
+.overlay-message.countdown {
+  text-align: center;
+
+  h2 {
+    margin-top: 30px;
+    font-size: 5em;
+  }
+  
+  span {
+    font-size: 5em;
+    font-weight: bold;
+    color: #ED1F28;
+  }
+}
+
+a#try-again, a#more-games, a#challenge-a-friend, a.subcategory {
+  float: left;
+  position: relative;
+  margin: 20px 0 0 50px;
+  border: 10px solid #231f20;
+  border-radius: 20px;
+  width: 220px;
+  line-height: 1;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+
+  &:hover {
+    border-color: #231f21;
+    top: -10px;
+    color: white;
+  }
+}
+
+a#try-again, a.subcategory {
+  padding-top: 18px;
+  height: 62px;
+  font-size: 3em;
+  background: #26963c;
+}
+
+a#more-games {
+  padding-top: 23px;
+  height: 57px;
+  font-size: 2.2em;
+  background: #50ade5;
+}
+
+a#challenge-a-friend {
+  padding-top: 12px;
+  height: 68px;
+  font-size: 2.2em;
+  background: #ed1f28;
+}
+
+#winner {
+  float: left;
+  margin: 30px 0 10px 130px;
+  border: 10px solid #231f20;
+  border-radius: 10px;
+  width: 430px;
+  height: 496px;
+  background: white;
+}
+
+#winner-stars {
+  margin: 12px;
+  width: 404px;
+  height: 84px;
+  line-height: 1.4;
+  font-size: 2.6em;
+  font-weight: bold;
+  text-align: center;
+  background: image-url("points-stars.png") no-repeat;
+
+  span {
+    font-size: 1.7em;
+  }
+}
+
+form {
+  margin-left: 34px;
+}
+
+legend {
+  margin-top: 30px;
+  font-size: 3.1em;
+  font-weight: bold;
+  color: #ed1f28;
+}
+
+label {
+  display: inline-block;
+  width: 27%;
+  font-weight: bold;
+  font-size: 1.4em;
+}
+
+.field {
+  margin-bottom: 20px;
+
+  input {
+    padding: 3px 5px;
+    border: none;
+    border-bottom: 3px solid #231f20;
+    width: 60%;
+    font-size: 1.4em;
+  }
+}
+
+.actions {
+  margin-right: 30px;
+  text-align: right;
+
+  input {
+    padding-bottom: 4px;
+    border: none;
+    border-radius: 12px;
+    width: 130px;
+    height: 50px;
+    font-size: 1.7em;
+    font-weight: bold;
+    color: white;
+    background: #231f20;
+    cursor: pointer;
+
+    &:hover {
+      background: #ed1f28;
+    }
+  }
+}
+
+#winner-more-info, #high-score-more-info {
+  position: relative;
+  float: right;
+  padding: 10px 10px 10px 50px;
+  border: 7px solid #231f20;
+  border-radius: 8px;
+  width: 260px;
+  height: 112px;
+  line-height: 1.3;
+  font-size: 1.6em;
+  background: white;
+}
+
+#winner-more-info {
+  margin: 0 50px 0 0;
+}
+
+#high-score-more-info {
+  margin: 120px 40px 0 0;
+}
+
+#winner-menu {
+  width: 920px;
+  margin-left: 200px;
+}
+
+#fruit-circle {
+  position: absolute;
+  top: -34px;
+  left: -170px;
+  border: 7px solid #231f20;
+  border-radius: 100px;
+  width: 187px;
+  height: 187px;
+  background: #fff200 image-url("fruit.png") no-repeat center;
+}
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #231f20;
+  &:hover { color: #ed1f28; }
+}
+
+#high-scores {
+  float: left;
+  margin: 30px 0 10px 60px;
+  border: 7px solid #231f20;
+  border-radius: 10px;
+  width: 560px;
+  height: 632px;
+  background: white;
+}
+
+.high-score {
+  margin: 0 auto;
+  padding: 10px 10px 8px 0;
+  border-bottom: 4px solid #231f20;
+  width: 470px;
+  height: 62px;
+  font-size: 2.4em;
+  font-weight: bold;
+
+  div {
+    display: inline-block;
+  }
+}
+
+.high-score-place {
+  float: left;
+  padding-top: 3px;
+  border: 4px solid #231f20;
+  border-radius: 32px;
+  width: 54px;
+  height: 51px;
+  text-align: center;
+  color: white;
+  background: #ed1f28;
+}
+
+.high-score-name {
+  float: left;
+  margin-left: 20px;
+  padding-top: 8px;
+}
+
+.high-score-points {
+  float: right;
+  padding-top: 8px;
+
+  span {
+    font-size: 0.7em;
+  }
+}
+
+#new-high-score {
+  position: relative;
+  top: -20px;
+  left: -27px;
+  border: 7px solid #231f20;
+  border-radius: 10px;
+  width: 600px;
+  background: white;
+}
+
+.no-border {
+  border: none !important;
+}
+
+form#new_challenge {
+  margin: 50px 343px 160px;
+}
+
+form#new_competition_entry {
+  margin: 0 0 40px 67px;
+}
+
+form#new_challenge, form#new_competition_entry {
+  padding: 30px 50px;
+  border: 7px solid #231f20;
+  width: 400px;
+  background: white;
+
+  label, .field input, .field textarea {
+    width: auto;
+  }
+
+  .field input, .field textarea {
+    background: #dddddd;
+    border: 1px solid #aaaaaa;
+  }
+
+  .field textarea {
+    height: 100px;
+  }
+
+  .actions {
+    margin-top: 10px;
+  }
+
+  .field_with_errors {
+    display: inline;
+    input {
+      border-color: #990000; 
+      background: #FFC2C2; 
+    }
+  }
+}
+
+#flash_notice {
+  position: absolute;
+  top: 0;
+  margin-left: 443px;
+  padding: 30px 50px;
+  border: 7px solid #231f20;
+  width: 200px;
+  font-size: 2em;
+  background: white;
+}
+
+img.pycr-circle, img#large-logo {
+  width: 283px;
+  height: 258px;
+}
+
+#game-controls img {
+  width: 226px;
+  height: 296px;
+}
+
+#challenge-menu {
+  text-align: center;
+
+  a#try-again {
+    display: inline-block;
+    float: none;
+    margin: 10px 0;
+  }
+}
+
+#winner-menu {
+  margin-left: 260px;
+}
+
+

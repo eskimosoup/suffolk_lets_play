@@ -1,0 +1,10 @@
+<% title GameRule.model_name.human.pluralize %>
+
+<div class="admin_functions">
+  <%= link_to "New #{ GameRule.model_name.human }", new_admin_game_rule_path %>
+</div>
+
+<%= informant_table @game_rules, {
+      :headings => [ 'Game', '', '' ], 
+      :body => [ lambda{|x| x.game.capitalize}, it_edit, it_destroy ]
+    } %>

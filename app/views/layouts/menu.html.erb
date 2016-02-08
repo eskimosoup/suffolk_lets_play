@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <%= render 'layouts/head' %>
+
+  <body>  
+    <script type="text/javascript">
+      function toggleRules() {
+        $("#overlay").toggle();
+        $("#overlay-message-container").toggle();
+        $(".overlay-message.rules").toggle();
+      }
+
+      function toggleSubcategories() {
+        $("#overlay").toggle();
+        $("#overlay-message-container").toggle();
+        $(".overlay-message.subcategories").toggle();
+      }
+    </script>
+
+    <div id="menu-container">
+      <div id="inner-container">
+        <%= link_to '', 'http://www.leedsletschange.co.uk/', :id => 'logo' %> 
+        <%= link_to '', 'http://www.nhs.uk/', :id => 'nhs-logo' %> 
+
+        <div class="clear"></div>
+
+        <% unless hide_flash? -%>
+          <%- flash.each do |name, msg| -%>
+            <%= content_tag :div, msg, :id => "flash_#{name}" %>
+          <%- end -%>
+        <% end -%>
+      
+        <%= yield %>
+      </div>
+    </div>
+
+    <div id="menu-footer">
+    </div>
+    
+    <div id="overlay" style="display: none;">
+    </div>
+
+    <div id="overlay-message-container" style="display: none;">
+      <div class="overlay-message rules" style="display: none;">
+        <h2>How to play</h2>
+        <%= raw @game_rules.rules %>
+        <%= link_to_function 'Close', "toggleRules()" %>        
+      </div>
+
+      <% if @subcategories %>
+        <div class="overlay-message subcategories" style="display: none;">
+          <h2>Choose game type</h2>
+          <% @subcategories.each do |subcat| %>
+            <%= link_to subcat.capitalize, "/games/#{params[:id]}/#{params[:category]}/play?subcategory=#{subcat}", :class => 'subcategory' %>
+          <% end %>
+          <div class="clear"></div>
+          <%= link_to_function 'Close', "toggleSubcategories()", :id => 'subcategory-close' %>        
+        </div>
+      <% end %>
+    </div>
+
+  </body>
+</html>
+

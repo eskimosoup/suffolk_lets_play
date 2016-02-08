@@ -1,0 +1,156 @@
+@media only screen and (max-width: 959px) {
+  #inner-container {
+    width: 456px;
+  }
+
+  #game-container, #winner-container, #menu-container, #main-container {
+    margin-bottom: -110px;
+    height: auto;
+    background: image-url("people-bg-plain.png") no-repeat bottom;
+  }
+
+  h1#choose-your-category {
+    width: 456px;
+    height: 48px;
+    color: transparent;
+    background: image-url("choose-your-category.png") no-repeat;
+  }
+
+  #category-cards {
+    margin: 10px auto 0;
+    width: 320px;
+  }
+
+  .category-card { //, .game-card {
+    margin-left: 0;
+    margin-top: 32px;
+  }
+
+  .category-card:hover {
+    top: 0;
+    left: 20px;
+  }
+
+  .menu-card {
+    margin-top: 10px;
+    margin-left: 106px;
+  }
+
+  .menu-card:hover {
+    top: 0;
+    left: 10px;
+  }
+
+  img#large-logo {
+    position: relative;
+    top: 20px;
+    left: 96px;
+  }
+
+  #menu-cards {
+    float: none;
+    margin: 30px auto 0;
+    width: 380px;
+  }
+
+  img#purple-man, img#purple-man-flipped {
+    display: none;
+  }
+
+  .overlay-message {
+    width: 398px;
+    height: 380px;
+  }
+
+  #overlay-message-container {
+    top: 20px;
+  }
+
+
+
+  form#new_competition_entry {
+    margin: 0 0 40px;
+    width: 342px;
+  }
+
+  form#new_challenge {
+    margin: 20px 0 40px;
+    width: 342px;
+  }
+
+  h1#high-score-header {
+    margin: 24px auto 16px;
+    border-bottom: 3px solid #231f20;
+    width: 384px;
+    height: 91px;
+    background: image-url("960/high-score.png") no-repeat top;
+  }
+
+  #high-scores {
+    margin: 24px 0 8px;
+    border: 6px solid #231f20;
+    width: 448px;
+    height: 506px;
+  }
+
+  .high-score {
+    padding: 8px 8px 6px 0;
+    border-bottom: 3px solid #231f20;
+    width: 376px;
+    height: 50px;
+  }
+
+  .high-score-place {
+    padding-top: 2px;
+    border: 3px solid #231f20;
+    //border-radius: 32px;
+    width: 43px;
+    height: 41px;
+  }
+
+  .high-score-name {
+    margin-left: 16px;
+    padding-top: 6px;
+  }
+
+  .high-score-points {
+    padding-top: 6px;
+  }
+
+  #new-high-score {
+    top: -16px;
+    left: -22px;
+    border: 6px solid #231f20;
+    width: 480px;
+  }
+
+  #winner-menu {
+    margin-left: 0;
+  }
+
+  a#try-again, a#more-games, a#challenge-a-friend, a.subcategory {
+    margin: 16px 0 0 30px;
+    border: 8px solid #231f20;
+    width: 176px;
+    font-size: 2em;
+
+    &:hover {
+      top: -8px;
+    }
+  }
+
+  a#try-again, a.subcategory {
+    padding-top: 14px;
+    height: 50px;
+  }
+
+  a#more-games {
+    padding-top: 18px;
+    height: 46px;
+  }
+
+  a#challenge-a-friend {
+    padding-top: 10px;
+    height: 54px;
+  }
+}

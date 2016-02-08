@@ -1,0 +1,7 @@
+In the CSV file front_image and back_image also need the extension.
+
+e.g.
+
+test-image.jpg
+
+Display should be true or false

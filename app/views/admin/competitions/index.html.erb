@@ -1,0 +1,12 @@
+<% title Competition.model_name.human.pluralize %>
+
+<div class="admin_functions">
+  <%= link_to "New #{ Competition.model_name.human }", new_admin_competition_path %>
+</div>
+
+<%= informant_table @competitions, {
+      :headings => [ 'Name', 'Prize', 'Prize Image', 'Start Date', 'End Date', 'Competition Entries', '', '' ], 
+      :body => [ :name, :prize_name, lambda{|x| image_tag x.prize_image.thumb if x.prize_image?},
+                lambda{|x| l x.start_date, :format => :long}, lambda{|x| l x.end_date, :format => :long},
+                lambda{|x| link_to "View (#{x.competition_entries.length})", admin_competition_entries_path(:competition_id => x) }, it_edit, it_destroy ]
+    } %>

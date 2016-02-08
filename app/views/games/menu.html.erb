@@ -1,0 +1,32 @@
+<%= image_tag '960/purple-man.png', :id => 'purple-man' %>
+<%= image_tag '960/pycr-circle-large.png', :id => 'large-logo' %>
+
+<div id="menu-cards">
+  <% if @subcategories %>
+    <div class="menu-card" onclick="toggleSubcategories()">
+  <% else %>
+    <div class="menu-card" onclick="window.location='/games/<%= params[:id] %>/<%= params[:category] %>/play'">
+  <% end %>
+    <div class="card-yellow">
+      PLAY
+    </div>
+  </div>
+
+  <div class="menu-card" onclick="toggleRules()">
+    <div class="card-yellow">
+      HOW TO PLAY
+    </div>
+  </div>
+
+  <div class="menu-card" onclick="window.location='/games/<%= params[:id] %>/<%= params[:category] %>/high_scores'">
+    <div class="card-yellow two-line">
+      HIGH SCORES
+    </div>
+  </div>
+
+  <div class="clear"></div>
+
+  <div class="cards-shelf"></div>
+</div>
+
+<div class="clear"></div>

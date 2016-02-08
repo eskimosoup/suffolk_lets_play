@@ -1,0 +1,131 @@
+<script type="text/javascript">
+  var currentCard = -1;
+  var nextCard = 0;
+  var values;
+  var calories = [<%= @calories.join(", ")%>];
+  var units = [<%= @units.join(", ")%>];
+  var names = <%= raw @names.to_json %>;
+  var facts = <%= raw @facts.to_json %>;
+  var gameFact = "<%= @default_fact %>";
+  var subcategory = "<%= @subcategory %>";
+  var startTime;
+  var timeDisplay = 0;
+  var cardsTotal = <%= (@game_cards.count - 1) %>;
+  var timer;
+  var countdownTimer;
+  var countdown = 2;
+  var winWidth;
+  
+  function countdownToStart(){
+    $("#countdown-timer").text(countdown);
+    if(countdown == 0){
+      clearInterval(countdownTimer);
+      start();
+    }
+    countdown --;
+  }
+  
+  function start(){
+    winWidth = document.documentElement.clientWidth;
+    if(subcategory == "calories"){
+      values = calories
+    }
+    else{
+      values = units
+    }
+    $(".countdown").toggle(false);
+    $("#overlay").toggle(false);
+    $("#overlay-message-container").toggle(false);
+    $("#trivia").toggle(true);
+    startTime = +new Date;
+    timer = setInterval(function(){timer_tick()}, 1000);
+    flipCard();    
+  }
+  
+  function timer_tick()
+  {
+    timeDisplay ++;
+    $("#time-taken").text(timeDisplay);    
+  }
+  
+  function flipCard(){
+    currentCard ++;
+    nextCard ++;
+    if(facts[currentCard] == null){
+      $("#trivia").text(gameFact);
+    }
+    else{
+      $("#trivia").text(facts[currentCard]);
+    }
+    $("#card-front-"+currentCard).toggle(false);
+    $("#card-back-"+currentCard).toggle(true);
+    setTimeout(function(){flipNextCard()}, 1000);       
+  }
+  
+  function flipNextCard(){
+    $("#card-front-"+nextCard).toggle(true);
+    if (currentCard == cardsTotal){
+      clearInterval(timer);
+      var endTime = +new Date;
+      var timeTaken = (endTime - startTime); //Date.now() - startTime;
+      var levelMaxTime = 600000; // The player has to complete the level within 10 minutes
+      var score = Math.max(0, levelMaxTime - timeTaken); // Calculate the final score
+      window.location.href = location.pathname.replace("play", "win"); 
+    }
+    $("#game-higher").removeClass();
+    $("#game-lower").removeClass();
+    if(winWidth < 960){
+    location.href = "#game-card-"+currentCard;
+    }
+  }
+  
+  function nextCardHigher(){
+    if($("#game-higher").hasClass("disabled")){
+      
+    }
+    else{
+      $("#game-higher").addClass("disabled");
+      $("#game-lower").addClass("disabled");
+      if (values[nextCard] > values[currentCard]){
+        flipCard();
+      }
+      else{
+        clearInterval(timer);
+        $("#card-front-"+nextCard).toggle(false);
+        $("#card-back-"+nextCard).toggle(true);
+        $("a#game-higher").addClass('disabled');
+        $("a#game-lower").addClass('disabled');
+        setTimeout(function(){endGame()}, 1000);
+      }    
+    }
+  }
+  
+  function nextCardLower(){
+    if($("#game-lower").hasClass("disabled")){
+      
+    }
+    else{
+      $("#game-higher").addClass("disabled");
+      $("#game-lower").addClass("disabled");
+      if (values[nextCard] < values[currentCard]){
+        flipCard();
+      }
+      else{
+        clearInterval(timer);
+        $("#card-front-"+nextCard).toggle(false);
+        $("#card-back-"+nextCard).toggle(true);
+        $("a#game-higher").addClass('disabled');
+        $("a#game-lower").addClass('disabled');
+        setTimeout(function(){endGame()}, 1000);
+      }
+    }
+  }
+  
+  function endGame(){
+    $("#overlay").toggle(true);
+    $("#overlay-message-container").toggle(true);
+    $(".game-over").toggle(true);
+  }
+
+  $(document).ready(function(){countdownTimer = setInterval(function(){countdownToStart()}, 1000)});
+</script>
