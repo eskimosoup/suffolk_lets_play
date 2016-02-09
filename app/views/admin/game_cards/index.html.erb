@@ -1,0 +1,10 @@
+<% title GameCard.model_name.human.pluralize %>
+
+<div class="admin_functions">
+  <%= link_to "New #{ GameCard.model_name.human }", new_admin_game_card_path %>
+</div>
+
+<%= informant_table @game_cards, {
+      :headings => [ 'Name', 'Game Category', 'Category', 'Units', 'Calories', 'Fact', 'Front Image', 'Back Image', 'Display', '', '' ], 
+      :body => [ :name, :game_category, :category, lambda{|x| x.units_float}, :calories, :fact, lambda{|x| image_tag x.front_image.thumb}, lambda{|x| image_tag x.back_image.thumb}, it_ajax_toggle(:display), it_edit, it_destroy ]
+    } %>

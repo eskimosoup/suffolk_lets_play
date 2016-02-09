@@ -1,0 +1,33 @@
+<%= form_for([:admin, @leaderboard_entry]) do |f| %>
+
+  <%= f.error_messages %>
+
+  <%= field_set_tag 'Basic Information' do -%>
+    
+    <div class="field">
+      <%= f.label :nickname %><br />
+      <%= f.text_field :nickname %>
+    </div>
+    
+    <div class="field">
+      <%= f.label :email %><br />
+      <%= f.text_field :email %>
+    </div>
+    
+    <div class="field">
+      <%= f.label :score %><br />
+      <%= f.number_field :score %>
+    </div>
+    
+    <div class="field">
+      <%= f.label :location %><br />
+      <%= f.text_field :location %>
+    </div>
+    
+  <% end -%>
+  
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+  
+<% end %>					

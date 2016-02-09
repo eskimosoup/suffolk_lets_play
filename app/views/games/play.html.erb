@@ -1,0 +1,48 @@
+<%= render "game_card_scripts" %>
+
+<div id="game-controls">
+  <h2>Timer</h2>
+  <div id="game-timer">
+    <span id="time-taken">0</span>
+  </div>
+  <%= link_to_function "Hi", "nextCardHigher()", :id => 'game-higher', :class => "disabled" %>
+  <%= link_to_function "Low", "nextCardLower()", :id => 'game-lower', :class => "disabled" %>
+  <%= image_tag '960/green-lady.png' %>
+</div>
+
+<div id="game-cards">
+  <div class="game-cards-row">
+    <% @game_cards.each_with_index do |game_card, i| %>
+      <% if i%4==0&&i!=0 %>
+        <div class="clear">
+        </div>
+        <div class="cards-shelf">
+        </div>
+      </div>
+      <div class="game-cards-row">
+      <% end %>
+      <div class="game-card" id="game-card-<%= i %>">
+        <div class="card-yellow-squared">
+          <% if i==0 %>
+            <%= image_tag game_card.front_image.show_960, :alt => game_card.name, :id => "card-front-#{i}" %>    
+          <% else %>
+            <%= image_tag game_card.front_image.show_960, :alt => game_card.name, :id => "card-front-#{i}", :style => "display: none" %>      
+          <% end %>
+          <%= image_tag game_card.back_image.show_960, :alt => game_card.calories, :id => "card-back-#{i}", :style => "display: none" %>
+        </div>
+      </div>
+    <% end %>
+    <div class="clear">
+    </div>
+    <div class="cards-shelf">
+    </div>
+  </div>
+</div>
+
+<div id="game-feedback">
+  <div id="trivia">
+    <%= @default_fact %>
+  </div>  
+</div>
+
+<div class="clear"></div>

@@ -1,0 +1,39 @@
+<% if params[:id] == 'pycr' %>
+  <h1 id="choose-your-category">
+    <%= title 'choose your category' %>
+  </h1>
+
+  <div id="category-cards">
+    <div class="category-card" onclick="window.location='/games/pycr/foods'">
+      <div class="card-yellow">
+        <%= image_tag '960/pycr-circle.png', :class => 'pycr-circle' %>
+      </div>
+
+      <div class="card-dark">
+        FOOD
+      </div>
+    </div>
+
+    <div class="category-card" onclick="window.location='/games/pycr/activities'">
+      <div class="card-yellow">
+        <%= image_tag '960/pycr-circle.png', :class => 'pycr-circle' %>
+      </div>
+
+      <div class="card-dark">
+        Activities
+      </div>
+    </div>
+
+    <div class="category-card" onclick="window.location='/games/pycr/drinks'">
+      <div class="card-yellow">
+        <%= image_tag '960/pycr-circle.png', :class => 'pycr-circle' %>
+      </div>
+
+      <div class="card-dark">
+        DRINK
+      </div>
+    </div>
+
+    <div class="clear"></div>
+  </div>
+<% end %>

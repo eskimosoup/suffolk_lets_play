@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <%= render 'layouts/head' %>
+
+  <body>  
+    <div id="game-container">
+      <div id="inner-container">
+        <% unless hide_flash? -%>
+          <%- flash.each do |name, msg| -%>
+            <%= content_tag :div, msg, :id => "flash_#{name}" %>
+          <%- end -%>
+        <% end -%>
+      
+        <%= yield %>
+      </div>
+    </div>
+
+    <div id="menu-footer">
+    </div>
+
+    <div id="overlay">
+    </div>
+
+    <div id="overlay-message-container">
+      <div class="overlay-message game-over" style="display: none;">
+        <h2>Game Over</h2>
+        <%= link_to 'try again', '', :id => 'try-again' %>
+        <%= link_to 'more games', root_url, :id => 'more-games' %>
+      </div>
+      <div class="overlay-message countdown">
+        <h2>Game Begins in</h2>
+        <span id="countdown-timer">3</span>
+      </div>
+    </div>
+  </body>
+</html>
+

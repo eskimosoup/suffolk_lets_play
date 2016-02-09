@@ -1,0 +1,79 @@
+.intro-box {
+  
+  margin-top: 20px;
+  padding: 10px 50px 20px 30px;
+  border: 6px solid #231F20;
+  
+  img#food-smart {
+    float: left;
+    margin-right: 30px;
+    width: 191px;
+    height: 190px;
+    z-index: 100;
+  }
+  
+}
+
+#content-boxes {
+  margin-top: 0px;
+  width: 100%;
+}
+
+.info-box,
+.intro-box {
+  
+  position: relative;
+  margin-bottom: 40px;
+  margin-left: 60px;
+  border-radius: 15px;
+  font-size: 1.6em;
+  background: white;
+  
+  h2 {
+    margin-bottom: 10px;
+    font-size: 2em;
+    font-weight: bold;
+  }
+  
+}
+
+.info-box {
+  
+  float: left;
+  width: 34%;
+  padding: 10px 20px 20px 60px;
+  border: 6px solid #231F20;
+  
+  .category-card {
+    float: left;
+    margin: 0;
+    margin-top: 20px;
+    font-size: 0.7em;
+    &:hover { top: 0; left: 10px; }
+  }
+  .category-card-text {
+    clear: left;
+    float: left;
+    margin-top: 5px;
+    width: 250px;
+    font-size: 1.6em;
+  }
+  
+  img {
+    position: absolute;
+    top: -22px;
+    left: -60px;
+    width: 114px;
+    height: 114px;
+    &.pycr-circle {
+      position: static;
+      width:  226px;
+      height: 206px;
+    }
+  }
+  
+}
+
+#high-score-more-info {
+  margin-top: 0
+}

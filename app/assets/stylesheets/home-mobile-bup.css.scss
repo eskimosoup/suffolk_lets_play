@@ -1,0 +1,39 @@
+@media only screen and (max-width: 959px) {
+
+  #content-left {
+    float: left;
+    margin-top: 40px;
+    width: 456px;
+  }
+
+  #content-right {
+    float: left;
+    margin-top: 0;
+    width: 456px;
+
+    .category-card {
+      margin-top: 0;
+      margin-left: 70px;
+      &:hover { left: 0; }
+    }
+  }
+
+  img#food-smart {
+    position: relative;
+    top: 20px;
+    left: 130px;
+  }
+
+  .intro-box, .info-box {
+    font-size: 1.2em;
+  }
+
+  #high-score-more-info {
+    margin: 60px 12px 80px 0;
+    padding: 8px 8px 8px 40px;
+    border: 6px solid #231f20;
+    width: 208px;
+    height: 90px;
+    font-size: 1.4em;
+  }
+}

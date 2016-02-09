@@ -1,0 +1,80 @@
+#content-top {
+  .intro-box {
+    margin-top: 20px;
+  }
+
+  .category-card {
+    float: right;
+    margin-top: 20px;
+    font-size: 0.7em;
+    &:hover { top: 0; }
+  }
+
+  .category-card-text {
+    clear: right;
+    float: right;
+    margin-top: 5px;
+    width: 250px;
+    font-size: 1.6em;
+  }
+}
+
+#content-left {
+  float: left;
+  margin-top: 0px;
+  width: 480px;
+}
+
+#content-right {
+  float: right;
+  margin-top: 40px;
+  width: 480px;
+
+  #high-score-more-info {
+    margin-top: 0px;
+    margin-bottom: 10px;
+  }
+}
+
+.info-box, .intro-box {
+  position: relative;
+  margin-bottom: 40px;
+  margin-left: 60px;
+  border-radius: 15px;
+
+  font-size: 1.6em;
+  background: white;
+
+  h2 {
+    margin-bottom: 10px;
+    font-size: 2em;
+    font-weight: bold;
+  }
+}
+
+.info-box {
+  padding: 10px 20px 20px 60px;
+  border: 6px solid #231F20;
+
+  img {
+    position: absolute;
+    top: -22px;
+    left: -60px;
+    width: 114px;
+    height: 114px;
+  }
+}
+
+.intro-box {
+  padding: 10px 50px 20px 30px;
+  border: 6px solid #231F20;
+}
+
+img#food-smart {
+  float: left;
+  margin-right: 30px;
+  width: 191px;
+  height: 190px;
+  z-index: 100;
+}
+

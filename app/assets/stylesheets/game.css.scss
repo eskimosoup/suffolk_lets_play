@@ -1,0 +1,209 @@
+.game-cards-row {
+  margin: 40px 0 53px 32px;
+  width: 838px;
+}
+
+#game-timer {
+  display: inline-block;
+  margin-bottom: 20px;
+  border: 7px solid #231f20;
+  border-radius: 12px;
+  width: 166px;
+  height: 72px;
+  line-height: 1.8;
+  font-size: 3em;
+  background: white;
+}
+
+a#game-higher, a#game-lower {
+  position: relative;
+  display: inline-block;
+  width: 132px;
+  font-size: 2.2em;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+
+  &:hover {
+    border-color: #231f21;
+    top: -10px;
+  }
+  &.disabled:hover {
+    top: 0;
+    cursor: default;
+  } 
+}
+
+a#game-higher {
+  margin-bottom: 40px;
+  padding-top: 66px;
+  height: 92px;
+  background: image-url("arrow-up.png") no-repeat;
+  &.disabled {
+    background: image-url("arrow-up-disabled.png") no-repeat;
+  }
+}
+
+a#game-lower {
+  margin-bottom: 20px;
+  padding-top: 40px;
+  height: 118px;
+  background: image-url("arrow-down.png") no-repeat;
+  &.disabled { 
+    background: image-url("arrow-down-disabled.png") no-repeat;
+  }
+}
+
+.game-card img {
+  width: 154px;
+  height: 217px;
+}
+
+#game-cards {
+  float: left;
+  margin-left: 36px;
+  border: 7px solid #231f20;
+  width: 912px;
+  height: 690px;
+  background: white;
+}
+
+#game-controls {
+  float: right;
+  width: 222px;
+  text-align: center;
+
+  h2 {
+    text-transform: uppercase;
+    font-size: 2.2em;
+    font-weight: bold;
+  }
+}
+
+
+
+@media only screen and (min-width: 960px) { //and (max-width: 1199px) {
+
+  .game-cards-row {
+    margin: 32px 0 42px 26px;
+    width: 670px;
+  }
+
+  #game-timer {
+    margin-bottom: 16px;
+    border: 6px solid #231f20;
+    width: 133px;
+    height: 58px;
+  }
+
+  a#game-higher, a#game-lower {
+    width: 106px;
+
+    &:hover {
+      color: #fffffe;
+      top: -8px;
+    }
+  }
+
+  a#game-higher {
+    margin-bottom: 32px;
+    padding-top: 53px;
+    height: 74px;
+    background: image-url("960/arrow-up.png") no-repeat;
+
+    &.disabled {
+      background: image-url("960/arrow-up-disabled.png") no-repeat;
+    }
+  }
+
+  a#game-lower {
+    margin-bottom: 16px;
+    padding-top: 32px;
+    height: 94px;
+    background: image-url("960/arrow-down.png") no-repeat;
+
+    &.disabled { 
+      background: image-url("960/arrow-down-disabled.png") no-repeat;
+    }
+  }
+
+  .game-card img {
+    width: 123px;
+    height: 174px;
+  }
+
+  #game-cards {
+    margin-left: 29px;
+    border: 6px solid #231f20;
+    width: 730px;
+    height: 552px;
+  }
+
+  #game-controls {
+    width: 178px;
+  }
+}
+
+
+
+@media only screen and (max-width: 959px) {
+
+  #game-cards {
+    margin: 0;
+    padding-bottom: 20px;
+    width: 208px;
+    height: auto;
+
+    .cards-shelf {
+      display: none;
+    }
+  }
+
+  .game-cards-row {
+    margin: 0;
+    width: 208px;
+  }
+
+  .game-card {
+    margin: 20px 20px 0;
+  }
+
+  #game-controls {
+    position: fixed;
+    top: 0;
+    right: 0;
+
+    img {
+      display: none;
+    }
+  }
+
+  a#game-higher {
+    margin: 5px;
+    padding-top: 30px;
+    width: 70px;
+    height: 54px;
+    font-size: 1.3em;
+    background: image-url("mobile/arrow-up.png") no-repeat;
+    &.disabled {
+      background: image-url("mobile/arrow-up-disabled.png") no-repeat;
+    }
+  }
+
+  a#game-lower {
+    margin: 5px;
+    padding-top: 20px;
+    width: 70px;
+    height: 64px;
+    font-size: 1.3em;
+    background: image-url("mobile/arrow-down.png") no-repeat;
+    &.disabled { 
+      background: image-url("mobile/arrow-down-disabled.png") no-repeat;
+    }
+  }
+
+  #game-timer {
+    margin-bottom: 10px;
+  }
+}

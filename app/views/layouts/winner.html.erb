@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <%= render 'layouts/head' %>
+
+  <body>
+    <div id="winner-container">
+      <div id="inner-container">
+        <%= link_to '', root_url, :id => 'logo' %> 
+        <%= link_to '', 'http://www.nhs.uk/', :id => 'nhs-logo' %>
+
+        <div class="clear"></div>
+
+        <% unless hide_flash? -%>
+          <%- flash.each do |name, msg| -%>
+            <%= content_tag :div, msg, :id => "flash_#{name}" %>
+          <%- end -%>
+        <% end -%>
+
+        <%= yield %>
+      </div>
+    </div>
+
+    <div id="winner-footer">
+    </div>
+  </body>
+</html>
