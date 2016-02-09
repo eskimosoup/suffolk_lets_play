@@ -1,9 +1,16 @@
-LeedsLetsPlay::Application.configure do
+SuffolkLetsPlay::Application.configure do
 
-  config.action_mailer.default_url_options = { :host => 'www.ludo3.co.uk' }
+  config.action_mailer.default_url_options = { :host => 'suffolk.ludo5.co.uk' }
 
-  ActionMailer::Base.delivery_method = :sendmail
-  ActionMailer::Base.sendmail_settings = { :location => '/usr/lib/sendmail', :arguments => '-i -v' }
+  config.action_mailer.smtp_settings = { enable_starttls_auto: false }
+
+  ActionMailer::Base.delivery_method = :smtp
+  ActionMailer::Base.smtp_settings = {
+    address: 'mail.optimised.today',
+    authentication: :plain,
+    user_name: 'noreply@optimised.today',
+    password: 'LudoStudio47#!poip​'
+  }
 
   # Settings specified here will take precedence over those in config/application.rb
 
