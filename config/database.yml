@@ -39,6 +39,6 @@ production:
   reconnect: false
   database: suffolk_lets_play_production
   pool: 5
-  username: leeds
-  password: gethealthy47#!
+  username: suffolk_letsplay
+  password: h341th!47#!
   #socket: /var/lib/mysql/mysql.sock
