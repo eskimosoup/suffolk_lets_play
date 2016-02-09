@@ -7,7 +7,7 @@
         <div class="high-score-name"><%= leaderboard_entry.nickname %></div>
         <div class="high-score-points">
           <%= number_with_delimiter(leaderboard_entry.score) %><span>pts</span>
-        </div> 
+        </div>
       </div>
     <% end %>
   <% else %>
@@ -23,7 +23,7 @@
         <div class="high-score-name"><%= @leaderboard_entry.nickname %></div>
         <div class="high-score-points">
           <%= number_with_delimiter(@leaderboard_entry.score) %><span>pts</span>
-        </div> 
+        </div>
       </div>
     </div>
   <% end %>
@@ -36,11 +36,11 @@
   <div id="fruit-circle"></div>
   <% if @category == 'activities' %>
     For more information on healthy eating and maintaining a healthy weight
-    <%= link_to 'click here', 'http://www.leedsletschange.co.uk/pages/information-on-weight-management', :target => '_blank' %>
+    <%#= link_to 'click here', 'http://www.leedsletschange.co.uk/pages/information-on-weight-management', :target => '_blank' %>
   <% else %>
     <%#= link_to 'click here', 'http://www.leedsletschange.co.uk/pages/information-on-healthy-eating', :target => '_blank' %>
     To enter our competition and be in with a chance of winning a fantastic prize
-    <%= link_to 'click here', new_competition_entry_path %>
+    <%#= link_to 'click here', new_competition_entry_path %>
   <% end %>
 </div>
 -->
@@ -50,14 +50,14 @@
   <%= link_to 'play', {:action => 'play'}, :id => 'try-again' %>
   <% if @leaderboard_entry %>
     <%= link_to(
-          'challenge a friend', 
-          new_challenge_path(:game => params[:category], :score => @leaderboard_entry.score), 
+          'challenge a friend',
+          new_challenge_path(:game => params[:category], :score => @leaderboard_entry.score),
           { :id => 'challenge-a-friend' }
-        ) %>      
+        ) %>
   <% else %>
     <%= link_to(
-        'challenge a friend', 
-        new_challenge_path(:game => params[:category]), 
+        'challenge a friend',
+        new_challenge_path(:game => params[:category]),
         { :id => 'challenge-a-friend' }
       ) %>
   <% end %>

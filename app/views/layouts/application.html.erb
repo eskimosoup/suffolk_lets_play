@@ -2,11 +2,11 @@
 <html>
   <%= render 'layouts/head' %>
 
-  <body>  
+  <body>
     <div id="main-container">
       <div id="inner-container">
-        <%= link_to '', 'http://www.leedsletschange.co.uk/', :id => 'logo' %> 
-        <%= link_to '', 'http://www.nhs.uk/', :id => 'nhs-logo' %> 
+        <%= link_to '', root_url, :id => 'logo' %> 
+        <%= link_to '', 'http://www.nhs.uk/', :id => 'nhs-logo' %>
 
         <div class="clear"></div>
 
@@ -15,7 +15,7 @@
             <%= content_tag :div, msg, :id => "flash_#{name}" %>
           <%- end -%>
         <% end -%>
-      
+
         <%= yield %>
       </div>
     </div>
@@ -25,4 +25,3 @@
 
   </body>
 </html>
-

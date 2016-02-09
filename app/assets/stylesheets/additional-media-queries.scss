@@ -1,0 +1,204 @@
+@media screen and (max-width: 767px) {
+  #inner-container {
+    padding: 0 5px;
+    width: auto;
+  }
+
+  h1#choose-your-category {
+    background-position: center;
+    background-size: contain;
+    display: block;
+    height: 30px;
+    margin: 0 auto;
+    width: auto;
+  }
+
+  a#logo {
+    background-size: contain;
+    margin: 0;
+    width: 160px;
+  }
+
+  a#nhs-logo {
+    margin-right: 0;
+  }
+
+  .category-card {
+    width: 90%;
+    height: auto;
+    margin: 5px auto;
+
+    .card-yellow {
+      height: auto;
+      margin: 20px auto 15px;
+
+      img {
+        display: block;
+        height: 120px;
+        margin: 0 auto;
+        width: auto;
+      }
+    }
+
+    &:hover {
+      left: 0;
+    }
+  }
+
+  .category-card .card-dark,
+  .menu-card .card-dark,
+  .game-card .card-dark {
+    font-size: 2em;
+    height: auto;
+  }
+
+  .category-cards {
+    margin: 0;
+  }
+
+  img#large-logo {
+    //height: 150px;
+    //left: 0;
+    //width: auto;
+    height: 110px;
+    left: auto;
+    position: absolute;
+    right: 9px;
+    top: 120px;
+    width: auto;
+  }
+
+  .menu-card {
+    display: block;
+    float: none;
+    height: auto;
+    margin: 5px 0;&
+
+    .card-yellow,
+    .card-yellow-squared {
+      font-size: 1.2em;
+      height: auto;
+      padding: 15px 0;
+    }
+
+    .card-yellow.two-line {
+      height: auto;
+      padding: 15px 0;
+    }
+  }
+
+  #high-scores {
+    float: none;
+    height: auto;
+    width: auto;
+  }
+
+  h1#high-score-header {
+    background-size: contain;
+    width: 90%;
+  }
+
+  .high-score {
+    font-size: 1.2em;
+    height: auto;
+    overflow: auto;
+    width: auto;
+
+    div {
+      margin-left: 15px;
+    }
+  }
+
+  .high-score-place {
+    width: 26px;
+    height: 26px;
+  }
+
+  #winner-menu {
+    width: auto;
+  }
+
+  form#new_challenge {
+    margin: 0;
+    padding: 5px;
+    width: auto;
+  }
+
+  #menu-cards {
+    width: auto;
+  }
+
+  form#new_challenge label,
+  form#new_challenge .field input,
+  form#new_challenge .field textarea,
+  form#new_competition_entry label,
+  form#new_competition_entry .field input,
+  form#new_competition_entry .field textarea {
+    width: 95%;
+  }
+
+  .overlay-message {
+    height: auto;
+    padding: 5px;
+    width: 91%;
+
+    &.rules h2 {
+      font-size: 2em;
+      line-height: 1.25;
+    }
+  }
+
+  #game-controls {
+    top: 22px;
+    width: 93px;
+  }
+
+  #game-timer {
+    width: 76px;
+  }
+
+  #winner {
+    float: none;
+    height: auto;
+    margin: 0;
+    width: auto;
+  }
+
+  h1#winner-header {
+    background-size: contain;
+    width: auto;
+  }
+
+  #winner-stars {
+    width: auto;
+
+    span {
+      display: inline-block;
+      font-size: 1em;
+      margin: 20px 0 0 90px;
+    }
+  }
+
+  #new_leaderboard_entry {
+    margin: 0;
+    padding: 0 15px 15px;
+
+    legend {
+      font-size: 2em;
+      margin: 15px 0;
+    }
+  }
+
+  #new-high-score {
+    left: 0;
+    top: 0;
+    width: auto;
+  }
+
+  .overlay-message.subcategories a#subcategory-close {
+    display: block;
+    float: none;
+    font-size: .75em;
+    text-align: right;
+  }
+}
