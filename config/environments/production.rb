@@ -1,6 +1,5 @@
 SuffolkLetsPlay::Application.configure do
-
-  config.action_mailer.default_url_options = { :host => 'suffolk.ludo5.co.uk' }
+  config.action_mailer.default_url_options = { host: 'suffolk.ludo5.co.uk' }
 
   config.action_mailer.smtp_settings = { enable_starttls_auto: false }
 
@@ -9,7 +8,7 @@ SuffolkLetsPlay::Application.configure do
     address: 'mail.optimised.today',
     authentication: :plain,
     user_name: 'noreply@optimised.today',
-    password: 'LudoStudio47#!poip​'
+    password: 'LudoStudio47#!poip'
   }
 
   # Settings specified here will take precedence over those in config/application.rb
@@ -80,7 +79,11 @@ SuffolkLetsPlay::Application.configure do
     'tinymce/plugins/souperimage/editor_plugin.js',
     'tinymce/plugins/souperimage/css/advimage.css',
     'tinymce/plugins/souperimage/js/image.js',
-    'tinymce/plugins/souperimage/langs/en_dlg.js'
+    'tinymce/plugins/souperimage/langs/en_dlg.js',
+    'willow/*',
+    'manticore/*',
+    'informant/*',
+    'chronicler/*'
   ]
 
   # Disable delivery errors, bad email addresses will be ignored

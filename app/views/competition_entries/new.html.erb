@@ -3,11 +3,11 @@
     <%= image_tag '5-a-day.png' %>
 
     <h2><%= @competition.name %></h2>
-    
+
     <% if @competition.prize_image? %>
       <%= image_tag @competition.prize_image, :alt => @competition.prize_name, :width => "100%", :height => "100%" %>
     <% end %>
-    
+
     <div class="user-content">
       <%= raw @competition.message %>
     </div>
@@ -34,29 +34,31 @@
 
 <div class="clear"></div>
 
+<!--
 <div id="content-bottom">
   <div class="intro-box">
     <%#= image_tag 'fat.png' %>
 
     <h2>Terms and Conditions</h2>
     <p>
-      The competition is free to enter. The competition is open to anyone 
-      aged over 16 who lives in Leeds with a valid Leeds postcode and runs 
-      from 21st February to 28th March (inclusive). Entries received after 
-      this date will not be counted. The competition winner may be asked 
-      to take part in some publicity, if you enter the competition and win 
+      The competition is free to enter. The competition is open to anyone
+      aged over 16 who lives in Leeds with a valid Leeds postcode and runs
+      from 21st February to 28th March (inclusive). Entries received after
+      this date will not be counted. The competition winner may be asked
+      to take part in some publicity, if you enter the competition and win
       but do not want to take part in any publicity please let us know.
     </p>
 
     <br />
 
     <p>
-      The winner will be drawn at random and will be notified by email or 
-      telephone. NHS Airedale, Bradford and Leeds does not endorse any 
-      specific products or services offered as part of the competition. NHS 
-      Airedale Bradford and Leeds is awarding the prize is good faith and 
-      cannot be held liable for any injury. Loss or damage caused as a 
+      The winner will be drawn at random and will be notified by email or
+      telephone. NHS Airedale, Bradford and Leeds does not endorse any
+      specific products or services offered as part of the competition. NHS
+      Airedale Bradford and Leeds is awarding the prize is good faith and
+      cannot be held liable for any injury. Loss or damage caused as a
       result of using the prize.
     </p>
   </div>
 </div>
+-->

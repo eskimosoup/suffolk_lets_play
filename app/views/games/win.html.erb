@@ -4,7 +4,7 @@
   <div id="winner-stars">
     <span><%= @leaderboard_entry.score %></span>pts
   </div>
-  
+
   <%= form_for @leaderboard_entry, {:url => "/games/#{ params[:id] }/#{ params[:category] }/submit_score"} do |f| %>
     <%= f.hidden_field :score %>
     <%= f.hidden_field :location %>
@@ -35,9 +35,9 @@
 <!--
 <div id="winner-more-info">
   <div id="fruit-circle"></div>
-  
+
   <% if @category == 'activities' %>
-    <%= link_to 'click here', 'http://www.leedsletschange.co.uk/pages/information-on-weight-management', :target => '_blank' %>
+    <%#= link_to 'click here', 'http://www.leedsletschange.co.uk/pages/information-on-weight-management', :target => '_blank' %>
   <% else %>
     <%#= link_to 'click here', 'http://www.leedsletschange.co.uk/pages/information-on-healthy-eating', :target => '_blank' %>
     To enter our competition and be in with a chance of winning a fantastic prize
@@ -50,8 +50,8 @@
 <div id="winner-menu">
   <%= link_to 'play again', {:action => 'play'}, :id => 'try-again' %>
   <%= link_to(
-        'challenge a friend', 
-        new_challenge_path(:game => params[:category], :score => @leaderboard_entry.score), 
+        'challenge a friend',
+        new_challenge_path(:game => params[:category], :score => @leaderboard_entry.score),
         { :id => 'challenge-a-friend' }
       ) %>
   <%#= link_to 'more games', root_url, :id => 'more-games' %>
