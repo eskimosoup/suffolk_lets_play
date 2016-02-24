@@ -69,8 +69,8 @@ a#logo {
   float: left;
   display: block;
   margin-left: 56px;
-  width: 212px;
-  height: 89px;
+  width: 100px;
+  height: 100px;
   background: image-url("logo.png") no-repeat;
 }
 
@@ -317,8 +317,8 @@ img#purple-man-flipped {
     font-size: 3em;
   }
 
-  a { 
-    margin: 0 30px; 
+  a {
+    margin: 0 30px;
     font-size: 1.4em;
   }
 }
@@ -331,8 +331,8 @@ img#purple-man-flipped {
     text-align: center;
   }
 
-  a { 
-    margin: 10px 0 0 50px; 
+  a {
+    margin: 10px 0 0 50px;
     font-size: 1.4em;
   }
 
@@ -357,7 +357,7 @@ img#purple-man-flipped {
     margin-top: 30px;
     font-size: 5em;
   }
-  
+
   span {
     font-size: 5em;
     font-weight: bold;
@@ -626,8 +626,8 @@ form#new_challenge, form#new_competition_entry {
   .field_with_errors {
     display: inline;
     input {
-      border-color: #990000; 
-      background: #FFC2C2; 
+      border-color: #990000;
+      background: #FFC2C2;
     }
   }
 }
@@ -666,5 +666,3 @@ img.pycr-circle, img#large-logo {
 #winner-menu {
   margin-left: 260px;
 }
-
-
