@@ -1,6 +1,6 @@
 class GamesController < ApplicationController
 
-  before_filter :set_category, :except => [:index, :show]
+  before_filter :set_category, :check_schools_version, :except => [:index, :show]
 
   def index
   end
@@ -76,6 +76,10 @@ class GamesController < ApplicationController
 
   def set_category
     @category = params[:category]
+  end
+
+  def check_schools_version
+    redirect_to root_url, alert: "Not allowed" if subdomain != "games" && params[:category] == "drinks"
   end
 
 end

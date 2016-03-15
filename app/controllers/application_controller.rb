@@ -5,6 +5,11 @@ class ApplicationController < ActionController::Base
     
   end
 
+  def subdomain 
+    @subdomain ||= request.subdomain
+  end
+  helper_method :subdomain
+
   private
 
   def current_game_instance

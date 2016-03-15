@@ -24,15 +24,17 @@
       </div>
     </div>
 
-    <div class="category-card" onclick="window.location='/games/pycr/drinks'">
-      <div class="card-yellow">
-        <%= image_tag '960/pycr-circle.png', :class => 'pycr-circle' %>
-      </div>
+    <% if subdomain == "games" %>
+      <div class="category-card" onclick="window.location='/games/pycr/drinks'">
+        <div class="card-yellow">
+          <%= image_tag '960/pycr-circle.png', :class => 'pycr-circle' %>
+        </div>
 
-      <div class="card-dark">
-        DRINK
+        <div class="card-dark">
+          DRINK
+        </div>
       </div>
-    </div>
+    <% end %>
 
     <div class="clear"></div>
   </div>
