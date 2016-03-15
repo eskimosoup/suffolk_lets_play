@@ -19,3 +19,7 @@ gem 'chronicler', git: 'git@github.com:eskimosoup/chronicler.git', branch: 'rail
 gem 'willow', git: 'git@github.com:eskimosoup/willow.git', branch: 'rails_3'
 gem 'manticore', git: 'git@github.com:eskimosoup/manticore.git', branch: 'rails_3'
 gem 'cancancan', '1.12.0'
+
+group :development do
+  gem 'test-unit', '~> 3.0'
+end
