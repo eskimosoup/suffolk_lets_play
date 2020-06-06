@@ -10,8 +10,8 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'jquery-rails'
-gem 'jquery-ui-rails'
+gem 'jquery-rails', '3.1.4'
+gem 'jquery-ui-rails', '5.0.5'
 gem 'bcrypt-ruby', '~> 3.0.0'
 
 gem 'informant', git: 'git@github.com:eskimosoup/informant.git', branch: 'rails_3'
@@ -19,7 +19,15 @@ gem 'chronicler', git: 'git@github.com:eskimosoup/chronicler.git', branch: 'rail
 gem 'willow', git: 'git@github.com:eskimosoup/willow.git', branch: 'rails_3'
 gem 'manticore', git: 'git@github.com:eskimosoup/manticore.git', branch: 'rails_3'
 gem 'cancancan', '1.12.0'
+gem 'optimadmin_generators', git: 'git@github.com:eskimosoup/optimadmin_generators.git', group: :development, branch: :manticore
 
 group :development do
   gem 'test-unit', '~> 3.0'
+end
+
+group :development do
+  gem "capistrano", :require => false
+  gem "capistrano-rails", :require => false
+  gem "capistrano-rbenv", :require => false
+  gem "capistrano-passenger", :require => false
 end

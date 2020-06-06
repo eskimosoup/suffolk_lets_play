@@ -2,7 +2,6 @@ SuffolkLetsPlay::Application.configure do
   config.logger = Logger.new(config.paths['log'].first, 3, 5_242_880)
   config.action_mailer.default_url_options = { host: 'suffolk.ludo5.co.uk' }
 
-  config.action_mailer.smtp_settings = { enable_starttls_auto: false }
   config.action_dispatch.tld_length = 2
 
   ActionMailer::Base.delivery_method = :smtp

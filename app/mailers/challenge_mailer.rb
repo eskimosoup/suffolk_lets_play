@@ -1,5 +1,5 @@
 class ChallengeMailer < ActionMailer::Base
-  default from: SITE_SETTINGS['Email']
+  default from: "noreply@optimised.today"
 
   def challenge_friend(challenge)
     @challenge = challenge
