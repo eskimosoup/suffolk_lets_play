@@ -20,10 +20,7 @@ gem 'willow', git: 'git@github.com:eskimosoup/willow.git', branch: 'rails_3'
 gem 'manticore', git: 'git@github.com:eskimosoup/manticore.git', branch: 'rails_3'
 gem 'cancancan', '1.12.0'
 gem 'optimadmin_generators', git: 'git@github.com:eskimosoup/optimadmin_generators.git', group: :development, branch: :manticore
-
-group :development do
-  gem 'test-unit', '~> 3.0'
-end
+gem 'test-unit', '~> 3.0'
 
 group :development do
   gem "capistrano", :require => false
