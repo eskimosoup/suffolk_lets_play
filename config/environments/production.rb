@@ -9,7 +9,9 @@ SuffolkLetsPlay::Application.configure do
     address: 'mail.optimised.today',
     authentication: :plain,
     user_name: 'noreply@optimised.today',
-    password: ENV['NOREPLY_PASSWORD']
+    password: ENV['NOREPLY_PASSWORD'],
+    enable_starttls_auto: false,
+    port: 587
   }
 
   # Settings specified here will take precedence over those in config/application.rb
